@@ -1,0 +1,11 @@
+homework
+----------
+
+-CRUD (Sweet Alert)
+	-custom input validation errors
+	-image upload in update process
+	-delete images from storage if changes
+
+-categories,brands,subcategories(CRUD)
+
+-
