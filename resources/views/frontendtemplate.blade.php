@@ -7,12 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <title>Online Shopping - @yield('title')</title>
 
   <!-- Bootstrap core CSS -->
   <link href="{{asset('frontendtemplate/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-  <link href="{{asset('frontendtemplate/vendor/fontawesome-free')}}" rel="stylesheet">
+  <link href="{{asset('frontendtemplate/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet">
   <!-- Custom styles for this template -->
   <link href="{{asset('frontendtemplate/css/small-business.css')}}" rel="stylesheet">
   
@@ -40,12 +41,17 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Services</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="{{route('cart')}}">
               <i class='fa fa-shopping-cart'></i>
               <span class="badge badge-pill bg-white text-danger"></span>
             </a>
-          </li>
+          </li> -->
+          <li class="nav-item">
+          <a class="nav-link" href="{{route('cart')}}"><i class="fa fa-shopping-cart" style="font-size:34;"></i>
+            <span class="badge badge-light product_count">0</span>
+          </a>
+        </li>
         </ul>
       </div>
     </div>

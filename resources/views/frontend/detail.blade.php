@@ -3,7 +3,7 @@
 @section('title','Item Detail')
 
 @section('content')
-	<div class="container">
+	<div class="container">  
 		<h4>Detail Page</h4>
 		<div class="row">
 			<div class="col-md-6">
@@ -15,7 +15,8 @@
 				</span></p>
 				<p><strong>{{$item->name}}</strong></p>
 				<p>Price:{{$item->price}}MMK</p>
-				<a href="" class="btn btn-outline-primary">Add To Cart</a>
+				<a href="{{route('cart')}}" class="btn btn-outline-primary add_to_cart" data-id="{{$item->id}}" data-name="{{$item->name}}" data-price="{{$item->price}}"
+				 data-photo="{{$item->photo}}">Add To Cart</a>
 			</div>
 		</div>
 	</div>

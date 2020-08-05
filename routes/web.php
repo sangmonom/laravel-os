@@ -19,6 +19,8 @@ Route::get('itemdetail/{item}','FrontendController@itemdetail')->name('itemdetai
 
 Route::get('cart','FrontendController@cart')->name('cart');
 
+Route::post('checkout','FrontendController@checkout')->name('checkout');
+
 Route::get('dashboard', 'BackendController@dashboard')->name('dashboard');
 
 Route::resource('items','ItemController');//use resource because use crud
